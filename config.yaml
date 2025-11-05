@@ -1,0 +1,35 @@
+# 사용자 인증 설정
+credentials:
+  usernames:
+    admin:
+      email: admin@mysuni.com
+      name: 관리자
+      password: $2b$12$/zXF4ZLNTbKPWrCg7y8Tp.qGXVOZGZE84/JlC8AQCxPwNjievCkfW  # 비밀번호: admin123
+    hrd_manager:
+      email: hrd@mysuni.com
+      name: HRD 담당자
+      password: $2b$12$/zXF4ZLNTbKPWrCg7y8Tp.qGXVOZGZE84/JlC8AQCxPwNjievCkfW  # 비밀번호: admin123
+
+# 쿠키 설정
+cookie:
+  expiry_days: 30
+  key: mysuni_learning_report_auth
+  name: mysuni_auth_cookie
+
+# 사전 인증된 설정은 register_user 함수에서 처리됨 (최신 버전)
+# preauthorized:
+#   emails:
+#     - admin@mysuni.com
+
+# 변화군 분류 임계값
+change_group_thresholds:
+  low_learning_threshold: 0.5  # 평균의 50% 미만 = 저학습군
+  high_learning_threshold: 1.5  # 평균의 150% 초과 = 고학습군
+  increase_threshold: 0.1  # 10% 이상 증가 = 상승군
+  decrease_threshold: -0.1  # 10% 이상 감소 = 하락군
+
+# 리포트 설정
+report:
+  default_period: "상반기"  # 상반기 또는 하반기
+  target_companies: 25  # 멤버사 수
+
